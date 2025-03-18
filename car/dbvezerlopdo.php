@@ -31,7 +31,6 @@ class DBController
         {
             $stmt = $this->conn->prepare($query);
 
-            // Execute with params if available
             if ($params) {
                 $stmt->execute($params);
             } else {
@@ -48,4 +47,5 @@ class DBController
         $this->conn = null;
     }
 }
+
 ?>
