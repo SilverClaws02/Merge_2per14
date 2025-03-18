@@ -1,0 +1,6 @@
+Options +FollowSymlinks
+RewriteEngine on
+RewriteRule ^car/list/$ index.php?view=all [NC,QSA]
+RewriteRule ^car/list/([0-9]+)/$ index.php?view=single&id=$1 [NC,QSA]
+RewriteRule ^car/type/([a-zA-ZáéíóöőúüűÁÉÍÓÚÜŰ]+)/$ index.php?view=tipus&tid=$1 [NC,QSA]
+RewriteRule ^car/.*$ index.php [NC,QSA]
